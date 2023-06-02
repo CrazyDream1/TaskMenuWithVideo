@@ -349,10 +349,13 @@
 -analyzer:"D:/Unity/2022.3.0f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"D:/Unity/2022.3.0f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/GameCore/APIConnect/OdometerAPI.cs"
+"Assets/Scripts/GameCore/Music/MusicController.cs"
 "Assets/Scripts/GameCore/ScriptableObjects/Settings.cs"
 "Assets/Scripts/GameCore/SettingsController.cs"
 "Assets/Scripts/GameCore/UI/ConnectionIndicators.cs"
+"Assets/Scripts/GameCore/UI/MenuSwitcher.cs"
 "Assets/Scripts/GameCore/UI/OdometerUI.cs"
+"Assets/Scripts/GameCore/UI/SettingsUI.cs"
 "Assets/Scripts/GameCore/VLC/VLCPlayer.cs"
 -langversion:9.0
 
