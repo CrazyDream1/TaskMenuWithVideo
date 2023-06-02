@@ -123,7 +123,7 @@ public class VLCPlayerExample : MonoBehaviour
 	public void Play()
 	{
 		Log("VLCPlayerExample Play");
-
+		
 		mediaPlayer.Play();
 	}
 

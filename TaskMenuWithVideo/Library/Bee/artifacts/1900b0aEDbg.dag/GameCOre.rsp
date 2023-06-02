@@ -353,6 +353,7 @@
 "Assets/Scripts/GameCore/SettingsController.cs"
 "Assets/Scripts/GameCore/UI/ConnectionIndicators.cs"
 "Assets/Scripts/GameCore/UI/OdometerUI.cs"
+"Assets/Scripts/GameCore/VLC/VLCPlayer.cs"
 -langversion:9.0
 
 /deterministic

@@ -424,7 +424,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 547881918}
-  - component: {fileID: 547881917}
+  - component: {fileID: 547881919}
   m_Layer: 0
   m_Name: VLC
   m_TagString: Untagged
@@ -432,27 +432,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &547881917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 547881916}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a54f68b0283bcfc408393ef8ebab9465, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  screen: {fileID: 0}
-  canvasScreen: {fileID: 1179039255}
-  texture: {fileID: 0}
-  path: http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4
-  flipTextureX: 0
-  flipTextureY: 1
-  automaticallyFlipOnAndroid: 1
-  playOnAwake: 1
-  logToConsole: 0
 --- !u!4 &547881918
 Transform:
   m_ObjectHideFlags: 0
@@ -468,6 +447,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &547881919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547881916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f44dd19e355494fb7493b9f50c8c309, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _settingsController: {fileID: 1439510719}
+  screen: {fileID: 0}
+  canvasScreen: {fileID: 1179039255}
+  texture: {fileID: 0}
+  flipTextureX: 0
+  flipTextureY: 1
+  automaticallyFlipOnAndroid: 1
+  playOnAwake: 0
+  logToConsole: 0
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
