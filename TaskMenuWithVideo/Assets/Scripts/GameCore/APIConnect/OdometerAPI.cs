@@ -1,4 +1,5 @@
-﻿using NativeWebSocket;
+﻿using System.Threading;
+using NativeWebSocket;
 using UnityEngine;
 
 namespace GameCore.APIConnect
@@ -9,6 +10,11 @@ namespace GameCore.APIConnect
 
         public delegate void OdometerHandler(float newValue);
         public event OdometerHandler OnNewOdometerEvent;
+
+        public delegate void Handler();
+
+        public event Handler ConnectionEvent;
+        public event Handler DisconnectionEvent;
         
         private WebSocket _websocket;
         async void Start()
@@ -18,6 +24,7 @@ namespace GameCore.APIConnect
             _websocket.OnOpen += () =>
             {
                 Debug.Log("Connection open!");
+                ConnectionEvent?.Invoke();
             };
 
             _websocket.OnError += (e) =>
@@ -28,6 +35,7 @@ namespace GameCore.APIConnect
             _websocket.OnClose += (e) =>
             {
                 Debug.Log("Connection closed!");
+                DisconnectionEvent?.Invoke();
             };
 
             _websocket.OnMessage += (bytes) =>
@@ -52,9 +60,20 @@ namespace GameCore.APIConnect
 
         async void SendWebSocketMessage()
         {
+            if (_websocket.State == WebSocketState.Connecting)
+            {
+                Thread.Sleep(1000);
+            }
             if (_websocket.State == WebSocketState.Open)
             {
-                await _websocket.SendText("plain text message");
+                await _websocket.SendText("{\"operation\":\"getCurrentOdometer\"}");
+            }
+            else
+            {
+                if (_websocket.State == WebSocketState.Closed)
+                {
+                    await _websocket.Connect();
+                }
             }
         }
 

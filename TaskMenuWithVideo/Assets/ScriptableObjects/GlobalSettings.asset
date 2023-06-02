@@ -15,4 +15,4 @@ MonoBehaviour:
   IsMusicEnabled: 1
   IsSoundEnabled: 1
   MusicAndSoundVolume: 1
-  StreamUrl: rtsp://localhost:8445/stream
+  StreamUrl: rtsp://localhost:8554/stream
